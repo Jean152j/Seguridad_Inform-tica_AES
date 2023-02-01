@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deber2_Encriptar y Desencriptar</title>
+	<link rel="stylesheet" href="./estilos.css">
+	<link rel="shortcut icon" href="./Imagenes/candado.png">
+	<script type="text/javascript" src="script.js"></script>
+	<style>
+		pre {
+			overflow-x: auto;
+			white-space: pre-wrap
+		}
+        
+	</style>
+</head>
+
+<body>
+	<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="index.html">
+				<img alt=""
+					src="Imagenes/candado.png"
+					style="max-height: 80px" />
+			</a>
+			<button class="navbar-burger is-warning button" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</button>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item" href="cadenas.html">
+					Trabajar Con Cadenas
+				  </a>
+			
+				  <a class="navbar-item" href="archivos.html">
+					Trabajar Con Archivos
+				  </a>
+			</div>
+
+            <div class="navbar-end">
+				<a class="navbar-item">
+					Deber Cifrado AES - Jean Játiva
+				  </a>
+			</div>
+		</div>
+	</nav>
+    
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () => {
+			const boton = document.querySelector(".navbar-burger");
+			const menu = document.querySelector(".navbar-menu");
+			boton.onclick = () => {
+				menu.classList.toggle("is-active");
+				boton.classList.toggle("is-active");
+			};
+		});
+	</script>
+	<section class="section">
+		<div class="columns">
+			<div class="column">
+				<h2 class="is-size-2">Encriptar Cadena</h2>
+				<div class="field">
+					<h1 class="is-size-5">Contraseña</h1>
+					<div class="control">
+						<input id="contraseñaEncriptar" class="input is-rounded" type="password"
+							placeholder="Ingresa Una Contraseña">
+					</div>
+				</div>
+				<div class="field">
+                    <br>
+                    <h1 class="is-size-5">Información A Ser Encriptada</h1>
+					<div class="control">
+						<textarea id="informacionEncriptar" class="textarea is-link"
+							placeholder="Ingrese un texto o cadena"></textarea>
+					</div>
+				</div>
+                <center><button class="button is-link is-rounded" id="botonEncriptar">Encriptar Cadena</button></center>
+				<div class="field">
+                    <br>
+					<h1 class="is-size-5">Cadena Ecriptada</h1>
+					<div class="control">
+						<textarea readonly id="resultadoEncriptacion" class="textarea is-link"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<h2 class="is-size-2">Desencriptar Cadena</h2>
+				<div class="field">
+					<h1 class="is-size-5">Contraseña</h1>
+					<div class="control">
+						<input class="input is-rounded" id="contraseñaDesencriptar" type="password"
+                          placeholder="Ingresa La Contraseña">
+					</div>
+				</div>
+				<div class="field">
+                    <br>
+					<h1 class="is-size-5">Información A Ser Desencriptada</h1>
+					<div class="control">
+						<textarea class="textarea is-link" id="informacionDesencriptar"
+							placeholder="Ingrese la cadena cifrada que obtuvo"></textarea>
+					</div>
+				</div>
+                <center><button class="button is-link is-rounded" id="botonDesencriptar">Desencriptar Cadena</button></center>
+				<div class="field">
+                    <br>
+					<h1 class="is-size-5">Cadena Desencriptada</h1>
+					<div class="control">
+						<textarea readonly id="resultadoDesencriptacion" class="textarea is-link"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
+</body>
+
+</html>

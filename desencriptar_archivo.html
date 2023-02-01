@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deber2_Encriptar y Desencriptar</title>
+	<link rel="stylesheet" href="./estilos.css">
+	<link rel="shortcut icon" href="./Imagenes/candado.png">
+	<script type="text/javascript" src="script.js"></script>
+	<style>
+		pre {
+			overflow-x: auto;
+			white-space: pre-wrap
+		}
+        
+	</style>
+</head>
+
+<body>
+	<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="index.html">
+				<img alt=""
+					src="Imagenes/candado.png"
+					style="max-height: 80px" />
+			</a>
+			<button class="navbar-burger is-warning button" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</button>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item" href="cadenas.html">
+					Trabajar Con Cadenas
+				  </a>
+			
+				  <a class="navbar-item" href="archivos.html">
+					Trabajar Con Archivos
+				  </a>
+			</div>
+
+            <div class="navbar-end">
+				<a class="navbar-item">
+					Deber Cifrado AES - Jean Játiva
+				  </a>
+			</div>
+		</div>
+	</nav>
+    
+    <form action="desencriptar_a.php" method="post" enctype="multipart/form-data">
+	    <section class="section">
+		<div class="columns">
+			<div class="column">
+				<h2 class="is-size-2">Desencriptar Archivo</h2>
+				<div class="field">
+					<h1 class="is-size-5">Contraseña</h1>
+					<div class="control">
+						<input name="kunci" class="input is-rounded" type="password"
+							placeholder="Ingresa Una Contraseña">
+					</div>
+				</div>
+				<div class="field">
+                    <br>
+                    <h1 class="is-size-5">(Subir) Archivo A Ser Desencriptado</h1>
+					<div class="control">
+						<input type="file" name="doc" >
+					</div>
+				</div>
+                <center><button class="button is-link is-rounded" type="submit">Desencriptar Archivo</button></center>
+			</div>
+		</div>
+	    </section>
+    </form>
+    
+</body>
+
+</html>
