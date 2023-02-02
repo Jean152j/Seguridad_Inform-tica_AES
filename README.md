@@ -1,1 +1,2 @@
 # Seguridad_Inform-tica_AES
+Esta es una aplicación que se puede desplegar de forma web para trabajar con el cifrado y descifrado de cadenas y también de archivos, para obtener una mayor seguridad en sus documentos. 
